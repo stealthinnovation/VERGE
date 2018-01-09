@@ -24,6 +24,14 @@
 #include <miniupnpc/upnperrors.h>
 #endif
 
+#if !defined(HAVE_MSG_NOSIGNAL)
+#define MSG_NOSIGNAL 0
+#endif
+
+#if !defined(HAVE_MSG_DONTWAIT)
+#define MSG_DONTWAIT 0
+#endif
+
 // Dump addresses to peers.dat every 15 minutes (900s)
 #define DUMP_ADDRESSES_INTERVAL 900
 
